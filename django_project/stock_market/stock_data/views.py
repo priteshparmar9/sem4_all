@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def show_data(request):
-    symbol = {'AAPL','MSFT','GOOG'}
+    symbol = {'AAPL','MSFT','GOOG','AMZN'}
     stocks = []
     for s in symbol:
         print(s)
@@ -90,7 +90,7 @@ def show_watchlist(request):
       
 def view_stock(request):
     stocks = []
-    symbol = {'AAPL','MSFT','GOOG'}
+    symbol = {'AAPL','MSFT','GOOG','AMZN'}
     for s in symbol:
         stock = Stock_for_index()
         stock.symbol = s
