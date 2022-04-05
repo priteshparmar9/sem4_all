@@ -7,17 +7,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def show_data(request):
-    symbol = {'AAPL','MSFT','GOOG','AMZN'}
+    symbol = {'AAPL','MSFT','GOOG'}
     stocks = []
-    for s in symbol:
-        print(s)
     for s in symbol:        
         # plt.show()
-        print("hello")
         # plt.show()
         t = Stock()
         t.symbol = s
         t.price = get_price(s)
+        save_graph(request,s)
         t.img = 'graph_'+s+'.png'
         stocks.append(t)
     return redirect("../../",{'s': stocks})
@@ -26,15 +24,13 @@ def save_graph(request,s):
     url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+s+'&apikey=B03UT9F5UQOM6FST'
     r = requests.get(url)
     data = r.json()
-   # print(data["Time Series (Daily)"])
+    print(data)
     data = data["Time Series (Daily)"]
-        # print(data)
     dates = []
     prices = []
     j = i = 0
     price = 0.0
     for date in data:
-        print(data[date])
         if i % 4 == 0:
             dates.insert(j,date)
             prices.insert(j,data[date]['1. open'])
@@ -54,7 +50,8 @@ def save_graph(request,s):
     ax= plt.subplot()
     plt.setp(ax.get_xticklabels(), rotation=30, ha='right')
     plt.plot(xpoints, ypoints)
-    plt.savefig('static/images/graph_'+s+'.png',dpi=70)
+    plt.savefig('static/images/graph_'+s+'.png',dpi=50)
+    print("saved")
     # plt.show()
         # print("hello")
     return price
@@ -67,33 +64,39 @@ def add_to_watchlist(request):
     return redirect('../../../stock_data/watchlist')
     
 def show_stock(request):
-    print(request.GET['symbol'])
     return render(request,'view_single_stock.html',{'stock' : request.GET['symbol']})
 
 def get_price(s):
     url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+s+'&apikey=B03UT9F5UQOM6FST'
     r = requests.get(url)
     data = r.json()
-    print(data)
     price = 0.0
     data = data["Time Series (Daily)"]
+    i = 1
     for date in data:
         price = data[date]['1. open']
-        break
+        i = i + 1
+        if i == 2:
+            break
     return price
 
 def show_watchlist(request):
     watchlists1 = {}
     watchlists1["dataset"] = Watchlist.objects.all()
-    print(watchlists1)
     return render(request,"show_watchlist.html", {'watchlist' : watchlists1["dataset"]})
       
 def view_stock(request):
     stocks = []
-    symbol = {'AAPL','MSFT','GOOG','AMZN'}
+    symbol = {'AAPL','MSFT','GOOG'}
     for s in symbol:
         stock = Stock_for_index()
         stock.symbol = s
         stock.price = get_price(s)
         stocks.append(stock)
     return render(request,"view_stock.html",{'stocks': stocks})
+
+def save_data_to_database(request):
+    symbol = {'AAPL','MSFT','GOOG'}
+    # symbol = {'AMZN','GOOGL','TSLA'}
+    
+    pass
