@@ -101,11 +101,12 @@ def save_data_to_database(request):
 
     stocks = []
     for s in symbol:
-        # t = Stock()
+        t = Stock()
         t.img = 'static/images/graph_'+s+'.png'
         t.price = get_price(s)
-        Stock.objects.update_or_create(symbol = t.symbol, img = t.img, price = t.price)
+        Stock.objects.create(symbol = t.symbol, img = t.img, price = t.price)
         # stocks.append(t)
+        print("ads")
     # symbol = {'AMZN','GOOGL','TSLA'}
 
     return redirect("../../",{'s': stocks})
