@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Sun Mar 27 10:21:33 IST 2022
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Pritesh\\.m2\\repository\\org\\apache\\tomcat\\tomcat-jasper-el\\10.1.0-M12\\tomcat-jasper-el-10.1.0-M12.jar=WEB-INF/lib/tomcat-jasper-el-10.1.0-M12.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Pritesh\\.m2\\repository\\org\\apache\\tomcat\\tomcat-jasper\\10.1.0-M12\\tomcat-jasper-10.1.0-M12.jar=WEB-INF/lib/tomcat-jasper-10.1.0-M12.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Pritesh\\.m2\\repository\\org\\springframework\\spring-web\\5.3.6\\spring-web-5.3.6.jar=WEB-INF/lib/spring-web-5.3.6.jar

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "sem4",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"ostream": "cpp"
+		}
+	}
+}

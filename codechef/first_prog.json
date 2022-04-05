@@ -1,0 +1,679 @@
+{
+    "status": "Success",
+    "statusCode": 404,
+    "body": {
+        "symbols": [
+            {
+                "symbol": "BANKINDIA",
+                "symbol_info": "Bank of India",
+                "symbol_suggest": [
+                    {
+                        "input": "BANKINDIA",
+                        "weight": 14
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 7
+                    },
+                    {
+                        "input": "of",
+                        "weight": 7
+                    },
+                    {
+                        "input": "India",
+                        "weight": 7
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=BANKINDIA"
+            },
+            {
+                "symbol": "BANKBARODA",
+                "symbol_info": "Bank of Baroda",
+                "symbol_suggest": [
+                    {
+                        "input": "BANKBARODA",
+                        "weight": 11
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 6
+                    },
+                    {
+                        "input": "of",
+                        "weight": 6
+                    },
+                    {
+                        "input": "Baroda",
+                        "weight": 6
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=BANKBARODA"
+            },
+            {
+                "symbol": "BANKA",
+                "symbol_info": "Banka BioLoo Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "BANKA",
+                        "weight": 10
+                    },
+                    {
+                        "input": "Banka",
+                        "weight": 5
+                    },
+                    {
+                        "input": "BioLoo",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=BANKA"
+            },
+            {
+                "symbol": "BANKBEES",
+                "symbol_info": "NIPPON INDIA ETF BANK BEES",
+                "symbol_suggest": [
+                    {
+                        "input": "BANKBEES",
+                        "weight": 10
+                    },
+                    {
+                        "input": "NIPPON",
+                        "weight": 5
+                    },
+                    {
+                        "input": "INDIA",
+                        "weight": 5
+                    },
+                    {
+                        "input": "ETF",
+                        "weight": 5
+                    },
+                    {
+                        "input": "BANK",
+                        "weight": 5
+                    },
+                    {
+                        "input": "BEES",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=BANKBEES"
+            },
+            {
+                "symbol": "BANKNIFTY",
+                "symbol_info": "BANK NIFTY",
+                "symbol_suggest": [
+                    {
+                        "input": "BANKNIFTY",
+                        "weight": 10
+                    },
+                    {
+                        "input": "BANK",
+                        "weight": 3
+                    },
+                    {
+                        "input": "NIFTY",
+                        "weight": 3
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "derivatives",
+                "url": "\/get-quotes\/derivatives?symbol=BANKNIFTY"
+            },
+            {
+                "symbol": "BANKRAJAS",
+                "symbol_info": "The Bank of Rajasthan Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "BANKRAJAS",
+                        "weight": 10
+                    },
+                    {
+                        "input": "The",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 5
+                    },
+                    {
+                        "input": "of",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Rajasthan",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [],
+                "url": "\/get-quotes\/equity?symbol=BANKRAJAS"
+            },
+            {
+                "symbol": "INDUSINDBK",
+                "symbol_info": "IndusInd Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "INDUSINDBK",
+                        "weight": 16
+                    },
+                    {
+                        "input": "IndusInd",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 8
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=INDUSINDBK"
+            },
+            {
+                "symbol": "BANDHANBNK",
+                "symbol_info": "Bandhan Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "BANDHANBNK",
+                        "weight": 15
+                    },
+                    {
+                        "input": "Bandhan",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 8
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=BANDHANBNK"
+            },
+            {
+                "symbol": "KOTAKBANK",
+                "symbol_info": "Kotak Mahindra Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "KOTAKBANK",
+                        "weight": 16
+                    },
+                    {
+                        "input": "Kotak",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Mahindra",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 8
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=KOTAKBANK"
+            },
+            {
+                "symbol": "RBLBANK",
+                "symbol_info": "RBL Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "RBLBANK",
+                        "weight": 15
+                    },
+                    {
+                        "input": "RBL",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 8
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=RBLBANK"
+            },
+            {
+                "symbol": "AUBANK",
+                "symbol_info": "AU Small Finance Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "AUBANK",
+                        "weight": 15
+                    },
+                    {
+                        "input": "AU",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Small",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Finance",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 8
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=AUBANK"
+            },
+            {
+                "symbol": "AXISBANK",
+                "symbol_info": "Axis Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "AXISBANK",
+                        "weight": 16
+                    },
+                    {
+                        "input": "Axis",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 8
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=AXISBANK"
+            },
+            {
+                "symbol": "DHANBANK",
+                "symbol_info": "Dhanlaxmi Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "DHANBANK",
+                        "weight": 10
+                    },
+                    {
+                        "input": "Dhanlaxmi",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=DHANBANK"
+            },
+            {
+                "symbol": "HBANKETF",
+                "symbol_info": "HDFC Mutual Fund - HDFC Banking ETF",
+                "symbol_suggest": [
+                    {
+                        "input": "HBANKETF",
+                        "weight": 10
+                    },
+                    {
+                        "input": "HDFC",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Mutual",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Fund",
+                        "weight": 5
+                    },
+                    {
+                        "input": "-",
+                        "weight": 5
+                    },
+                    {
+                        "input": "HDFC",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Banking",
+                        "weight": 5
+                    },
+                    {
+                        "input": "ETF",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=HBANKETF"
+            },
+            {
+                "symbol": "UTIBANKETF",
+                "symbol_info": "UTI Mutual Fund - UTI Bank Exchange Traded Fund",
+                "symbol_suggest": [
+                    {
+                        "input": "UTIBANKETF",
+                        "weight": 10
+                    },
+                    {
+                        "input": "UTI",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Mutual",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Fund",
+                        "weight": 5
+                    },
+                    {
+                        "input": "-",
+                        "weight": 5
+                    },
+                    {
+                        "input": "UTI",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Exchange",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Traded",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Fund",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=UTIBANKETF"
+            },
+            {
+                "symbol": "ICICIBANK",
+                "symbol_info": "ICICI Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "ICICIBANK",
+                        "weight": 16
+                    },
+                    {
+                        "input": "ICICI",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 8
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 8
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=ICICIBANK"
+            },
+            {
+                "symbol": "KTKBANK",
+                "symbol_info": "The Karnataka Bank Limited",
+                "symbol_suggest": [
+                    {
+                        "input": "KTKBANK",
+                        "weight": 10
+                    },
+                    {
+                        "input": "The",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Karnataka",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Limited",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=KTKBANK"
+            },
+            {
+                "symbol": "MAHABANK",
+                "symbol_info": "Bank of Maharashtra",
+                "symbol_suggest": [
+                    {
+                        "input": "MAHABANK",
+                        "weight": 10
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 5
+                    },
+                    {
+                        "input": "of",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Maharashtra",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [
+                    "EQ"
+                ],
+                "url": "\/get-quotes\/equity?symbol=MAHABANK"
+            },
+            {
+                "symbol": "ORIENTBANK",
+                "symbol_info": "Oriental Bank of Commerce",
+                "symbol_suggest": [
+                    {
+                        "input": "ORIENTBANK",
+                        "weight": 10
+                    },
+                    {
+                        "input": "Oriental",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Bank",
+                        "weight": 5
+                    },
+                    {
+                        "input": "of",
+                        "weight": 5
+                    },
+                    {
+                        "input": "Commerce",
+                        "weight": 5
+                    }
+                ],
+                "result_type": "symbol",
+                "result_sub_type": "equity",
+                "activeSeries": [],
+                "url": "\/get-quotes\/equity?symbol=ORIENTBANK"
+            }
+        ],
+        "mfsymbols": [],
+        "search_content": [
+            {
+                "title": "<b>BANK<\/b> NIFTY INDEX",
+                "content": "<b>BANK<\/b> NIFTY INDEX 1 Options Contract Specifications:Monthly|Weekly\n<b>Bank<\/b> Nifty Futures Contract Specifications\nTicker <b>SymbolBANKNIFTYContract<\/b> Size40 units.Notional valueContract size multiplied by the index level (For example: if\nthe current index value",
+                "url": "\/products-services\/equity-derivatives-bank-nifty-futures-contract-specification",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "B.Com in <b>Banking<\/b> and Capital Markets",
+                "content": "B.Com in <b>Banking<\/b> and Capital Markets TOTAL DURATIONCERTIFICATION VALIDITYCOURSE TYPEClassroom\nFor more information, please Contact:\nDr.",
+                "url": "\/learn\/under-graduate-courses-bcom-in-banking-and-capital-markets",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "PGCM (Post Graduate Certificate in Management) in Investment <b>Banking<\/b>",
+                "content": "Investment <b>Banking<\/b>\n2. Mergers and Acquisitions\n3. Capital Market Operations\n4. Mutual Funds and Fixed Income Securities\n5. Investment Advisory\n6. Equity Research\nCore Courses in Term IV\n1. Computer Applications in Investment <b>Banking<\/b>\n2.",
+                "url": "\/learn\/pg-program-full-time-pgcm-investment-banking",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "Listing Ceremony of Ujjivan Small Finance <b>Bank<\/b>",
+                "content": "Listing Ceremony of Ujjivan Small Finance <b>Bank<\/b> \/national-stock-exchange\/about-nse-company About NSE \/event-gallery Event\nGallery \/listing-opening-bells-events Listing\/Opening Bell Events 1 EVENT NAMEListing Ceremony \u2013 Ujjivan Small Finance\n<b>BankDATE12th<\/b>",
+                "url": "\/event-details-listing-ceremony-ujjivan-small-finance-bank",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "Listing Ceremony of Suryoday Small Finance <b>Bank<\/b> Limited",
+                "content": "Listing Ceremony of Suryoday Small Finance <b>Bank<\/b> Limited \/national-stock-exchange\/about-nse-company About NSE\n\/event-gallery Event Gallery \/listing-opening-bells-events Listing\/Opening Bell Events 1 EVENT NAMEListing Ceremony -\nSuryoday Small Finance <b>Bank<\/b>",
+                "url": "\/event-details-listing-ceremony-suryoday-small-finance-bank-limited",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "Recognition of NSE Clearing Limited by <b>Bank<\/b> of England",
+                "content": "Recognition of NSE Clearing Limited by <b>Bank<\/b> of England Recognition of NSE Clearing Limited by <b>Bank<\/b> of England\nRecognition of NSE Clearing Limited by <b>Bank<\/b> of England 20-Mar-2019 Various publications right CNBC TV 18\nMarch 20, 2019 10:48 PM IST | PTI\n\nThe",
+                "url": "\/recognition-of-nse -clearing-limited-by-bank-of-england",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "<b>BANK<\/b> NIFTY INDEX",
+                "content": "<b>BANK<\/b> NIFTY INDEX 1 Futures Contract Specifications|Monthly Options Contract Specifications\n<b>Bank<\/b> Nifty Options Contract SpecificationsTicker <b>SymbolBANKNIFTYContract<\/b> Size40 units.Tick Size0.05Trading HoursAs in\nequity derivative segmentNo. of strikes\/strike",
+                "url": "\/products-services\/equity-derivatives-bank-nifty-option-contract-specification-weekly",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "Investment <b>Banking<\/b> Operations - International",
+                "content": "Investment <b>Banking<\/b> Operations - International For more information, call FLIP at 092436-66002 or email :\nsupport@learnwithflip.com\n<b>https:\/\/www.learnwithflip.com\/programs\/flip-ncfm-investment-banking-operations-international<\/b>\n<b>https:\/\/static.nseindia.com\/s3fs-public\/2019-09\/Investment%20Banking%20Operations%20l260x186.jpg<\/b>",
+                "url": "\/learn\/self-study-ncfm-modules-advanced-investment-banking-operations-international",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "Clearing <b>Banks<\/b> - Commodity Derivatives",
+                "content": "Clearing and Settlement 1 NSE Clearing has\nempanelled 15 clearing <b>banks<\/b> namely Axis <b>Bank<\/b> Ltd., <b>Bank<\/b> of India Ltd., Canara <b>Bank<\/b> Ltd., <b>Citibank<\/b> N.A., The Hongkong &\nShanghai <b>Banking<\/b> Corporation Ltd., ICICI <b>Bank<\/b> Ltd., HDFC <b>Bank<\/b> Ltd., IDBI <b>Bank<\/b> Ltd., IndusInd",
+                "url": "\/products-services\/commodity-derivatives-clearing-banks",
+                "result_type": "content",
+                "result_sub_type": "content"
+            },
+            {
+                "title": "Commercial <b>Banking<\/b> in India : A Beginner's Module",
+                "content": ":\/\/static.nseindia.com\/s3fs-public\/2020-02\/06-Foundation-Module_Web-Banner.jpg Commercial <b>Banking<\/b> in India : A\nBeginner's Module 250 350 Commercial <b>Banking<\/b> in India : A Beginner's Module This module aims at familiarizing the\ncandidates with the fundamentals",
+                "url": "\/learn\/self-study-ncfm-modules-foundation-commercial-banking-in-india",
+                "result_type": "content",
+                "result_sub_type": "content"
+            }
+        ],
+        "sitemap": []
+    }
+}

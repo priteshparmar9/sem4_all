@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+{% static  "images" as baseUrl %}
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Login Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <table border="1">
+		{% for s in stocks %}
+			<tr>
+				<td>{{s.symbol}}</td>
+				<td>{{s.price}}</td>
+				<td><a href="../show_stock?symbol={{s.symbol}}">View Stock</a></td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <table border = 1>
+            {% for w in watchlist %}
+                {% if w.username == user.username %}
+                <tr>
+                    <td>{{w.symbol}}</td>
+                    <td>{{w.quantity}}</td>
+                    <td>{{w.price}}</td>
+                </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import Entity_classes.Customer;
+import Entity_classes.book;
+import Dao.*;
+
+@Controller
+public class BooksController {
+	
+	@RequestMapping("/add_content")
+	public ModelAndView default_content(ModelAndView mv, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if(session.getAttribute("email").equals("priteshparmar19273@gmail.com")) {
+			book book1 = new book("Philosopher's Stone","This is first book of Harry Potter series. The whole series is of 7 books. In this book, it is exlained what is magical world of Hogwarts and contains Harry, Hermione and Ron's first year of school's experience.", "JK Rowling", "novel","",380);
+			book book2 = new book("Chamber of Secrets", "This is second book of Harry Potter series. This book contains Harry's journey to his second year at Hogwarts. And in this part, Harry destroys the first Horcrux which is Tom Riddle's Diary.","JK Rowling","novel","",400);
+			BookDao bd = new BookDao();
+			if(bd.is_available(book1.getTitle())) {
+				mv.setViewName("admin_page");
+				request.getSession().setAttribute("error", "Default content is already there..");
+			}
+			else if(bd.is_available(book2.getTitle())) {
+				mv.setViewName("admin_page");
+				request.getSession().setAttribute("error", "Default content is already there..");
+			}
+			else {
+				bd.saveBook(book1);
+				bd.saveBook(book2);
+				request.getSession().setAttribute("error", "Default content is added");
+				mv.setViewName("admin_page");
+			}
+		}
+		else {
+			mv.setViewName("index");
+		}
+		return mv;
+	}
+}
