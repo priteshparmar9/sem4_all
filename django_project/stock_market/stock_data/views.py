@@ -80,10 +80,6 @@ def get_price(s):
             break
     return price
 
-def show_watchlist(request):
-    watchlists1 = {}
-    watchlists1["dataset"] = Watchlist.objects.all()
-    return render(request,"show_watchlist.html", {'watchlist' : watchlists1["dataset"]})
       
 def view_stock(request):
     stocks = []
@@ -95,8 +91,21 @@ def view_stock(request):
         stocks.append(stock)
     return render(request,"view_stock.html",{'stocks': stocks})
 
+def show_watchlist(request):
+    watchlists1 = {}
+    watchlists1["dataset"] = Watchlist.objects.all()
+    return render(request,"show_watchlist.html", {'watchlist' : watchlists1["dataset"]})
+
 def save_data_to_database(request):
     symbol = {'AAPL','MSFT','GOOG'}
+
+    stocks = []
+    for s in symbol:
+        t = Stock()
+        t.img = 'static/images/graph_'+s+'.png'
+        t.price = get_price(s)
+        Stock.objects.update_or_create(symbol = t.symbol, img = t.img, price = t.price)
+        # stocks.append(t)
     # symbol = {'AMZN','GOOGL','TSLA'}
-    
-    pass
+
+    return redirect("../../",{'s': stocks})
