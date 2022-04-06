@@ -1,25 +1,167 @@
 <!DOCTYPE html>
-{% load static %}
-{% static  "images" as baseUrl %}
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Login Page</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Homepage</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smotthing: antialiased;
+        transition: all 3s ease;
+        scroll-behavior: smooth;
+
+    }
+
+    header {
+        background-color: black;
+        height: 755px;
+
+
+    }
+
+    body {
+        font-family: 'Baloo Tammudu 2', sans-serif;
+    }
+
+    .navbar {
+
+        margin-right: 30px;
+        padding-left: 30px;
+        background-color: black;
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+        width: 100%;
+
+
+    }
+
+    .navbar nav a {
+        text-decoration: none;
+        color: #3DCFD3;
+        padding-left: 15px;
+        font-weight: lighter;
+        margin-top: 20px;
+        margin-right: 10px;
+        font-size: larger;
+        transition: all .3s ease;
+    }
+
+    .navbar nav a:hover {
+        color: white;
+
+    }
+
+    .main {
+
+        padding-top: 50px;
+        margin-left: 40px;
+
+
+    }
+
+    .main h1 {
+        color: #3DCFD3;
+        font-size: 60px;
+    }
+
+    .main h3 {
+
+        color: white;
+    }
+
+    .sec2 {
+        background-color: rgb(234, 227, 219);
+        height: 500px;
+    }
+
+    .sec2 h2 {
+        padding-top: 40px;
+        color: black;
+        margin-left: 220px;
+    }
+
+    #tb {
+        width: 70%;
+        margin-left: 220px;
+    }
+
+    #tb th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+        font-size: large;
+    }
+
+    #tb tr:hover {
+        background-color: rgba(221, 221, 221, 0.501);
+    }
+
+    #tb td,
+    #tb th {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
 
 <body>
-    <table border="1">
-		{% for s in stocks %}
+
+    <header>
+        <div class="navbar">
+            <nav>
+                {% if not user.is_authenticated %}
+                <a href="registration">SignUp</a>
+                <a href="login">SignIn</a>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <a href="../watchlist">Watchlist</a>
+                <a href="edit">Edit</a>
+                <a href="../../">Index</a>
+                <a href="logout">Logout</a>
+                {% endif %}
+            </nav>
+        </div>
+
+        <div class="main">
+            <h1>Stocks Trading Made Easy</h1>
+            <h3>Let's get started to get free stock market statics, events and latest News</h3>
+        </div>
+        <br>
+    </header>
+
+    <section class="sec2">
+        <h2>Company's Stocks: </h2>
+
+        <table id="tb">
+            <tr>
+                <th>Company</th>
+                <th>Share Price</th>
+                <th>Visit</th>
+            </tr>
+            {% for s in stocks %}
 			<tr>
 				<td>{{s.symbol}}</td>
-				<td>{{s.price}}</td>
+				<td><b>$</b> {{s.price}}</td>
 				<td><a href="../show_stock?symbol={{s.symbol}}">View Stock</a></td>
 			</tr>
 		{% endfor %}
-	</table>
+        </table>
+
+    </section>
+
+
 </body>
+
 </html>

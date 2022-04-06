@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <img src="{{baseUrl}}/graph_{{stock}}.png"></body>
+    <img src="{{baseUrl}}/graph_{{stock}}.png" width="1000" height="800"></body>
 	<form action="../addwatchlist/" method="POST">
 		{% csrf_token %}
 		<input type="hidden" name="s" value = {{stock}}>
@@ -21,3 +21,5 @@
 	</form>
 </body>
 </html>
+
+
