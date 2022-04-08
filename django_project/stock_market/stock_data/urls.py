@@ -12,4 +12,6 @@ urlpatterns = [
     path('temp/',views.temp),
     path('delete/',views.delete),
     path('refresh/',views.refresh),
+    path('delete_stock/',views.delete_stock),
+    path('show_news/',views.show_news),
 ]

@@ -21,3 +21,8 @@ class Watchlist(models.Model):
     symbol = models.CharField(max_length=20)
     quantity = models.PositiveIntegerField()
     price = models.DecimalField(decimal_places=5,max_digits=10)
+
+class news(models.Model):
+    source = str
+    title = str
+    description = str

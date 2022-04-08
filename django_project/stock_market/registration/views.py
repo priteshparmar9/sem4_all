@@ -61,11 +61,15 @@ def logout(request):
 
 def edit(request):
     if request.method == "POST":
+        password = request.POST["password"]
         username = request.POST["username"]
-        email = request.POST["email"]
-        user = User.objects.update_or_create(username = username, email = email, password = request.user.password)
-        user.save()
-        return redirect("/")
+        User.objects.filter(username = request.user.username).update(password = password, username= username)
+        return redirect("/logout")
     else:
         return render(request,"edit.html")
         
+def contactus(request):
+    return render(request,"contactus.html")
+
+def admin(request):
+    return render(request,"admin.html")

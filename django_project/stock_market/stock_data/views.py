@@ -1,7 +1,9 @@
 import re
+from tkinter import N
+from urllib import response
 from django.shortcuts import redirect, render
 from .models import Stock, Stock_database, Stock_for_index
-from .models import Watchlist
+from .models import Watchlist, news
 import requests
 import matplotlib.pyplot as plt
 import numpy as np
@@ -57,7 +59,9 @@ def save_graph(request,s):
     return price
     
 def show_stock(request):
-    return render(request,'view_single_stock.html',{'stock' : request.GET['symbol']})
+    stock = {}
+    stock["dataset"] = Stock_database.objects.filter(symbol = request.GET['symbol']).all()
+    return render(request,'view_single_stock.html',{'stock' : stock["dataset"][0]})
 
 def get_price(s):
     url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+s+'&apikey=B03UT9F5UQOM6FST'
@@ -102,9 +106,7 @@ def temp(request):
 def delete(request):
     w = request.GET['id']
     Watchlist.objects.filter(id=w).delete()
-    watchlists1 = {}
-    watchlists1["dataset"] = Watchlist.objects.all()
-    return redirect(request,"watchlist", {'watchlist' : watchlists1["dataset"]})
+    return redirect('../../../')
 
 def refresh(request):
     symbol = {} 
@@ -113,3 +115,24 @@ def refresh(request):
         stock.price = get_price(stock.symbol)
         Stock_database.objects.filter(symbol=stock.symbol).update(price=stock.price)
     return render(request,"view_stock.html",{'stocks': symbol["dataset"]})
+
+def delete_stock(request):
+    symbol = request.GET["symbol"]
+    Stock_database.objects.filter(symbol=symbol).delete()
+    return redirect('../../../')
+
+def show_news(request):
+    url = "https://newsapi.org/v2/top-headlines?country=us&country=in&category=business&apiKey=549f52787fc940f692c75e50d670d2bb"
+    r = requests.get(url)
+    data = r.json()
+    data = data['articles']
+    news1 = []
+    i = 0
+    for data1 in data:
+        n = news()
+        n.source = data1['source']['name'] 
+        n.title = data1['title']
+        n.description = data1['description']
+        news1.insert(i,n)
+        i = i + 1
+    return render(request, "show_news.html",{'news': news1})
