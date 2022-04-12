@@ -1,12 +1,11 @@
-import re
-from tkinter import N
-from urllib import response
+from symtable import Symbol
 from django.shortcuts import redirect, render
-from .models import Stock, Stock_database, Stock_for_index
+from .models import Stock, Stock_database
 from .models import Watchlist, news
 import requests
 import matplotlib.pyplot as plt
 import numpy as np
+
 
 def show_data(request):
     symbol = {'AAPL','MSFT','GOOG'}
@@ -23,7 +22,7 @@ def show_data(request):
     return redirect("../../",{'s': stocks})
     
 def save_graph(request,s):
-    url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+s+'&apikey=B03UT9F5UQOM6FST'
+    url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+s+'&apikey=50VHB72TFYCGNCKI'
     r = requests.get(url)
     data = r.json()
     print(data)
@@ -64,7 +63,7 @@ def show_stock(request):
     return render(request,'view_single_stock.html',{'stock' : stock["dataset"][0]})
 
 def get_price(s):
-    url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+s+'&apikey=B03UT9F5UQOM6FST'
+    url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+s+'&apikey=50VHB72TFYCGNCKI'
     r = requests.get(url)
     data = r.json()
     print(data)
@@ -84,15 +83,17 @@ def view_stock(request):
     return render(request,"view_stock.html",{'stocks': symbol["dataset"]})
 
 def show_watchlist(request):
-    watchlists1 = {}
+    watchlists1 = {}        
     watchlists1["dataset"] = Watchlist.objects.all()
     return render(request,"show_watchlist.html", {'watchlist' : watchlists1["dataset"]})
 
 def add_to_watchlist(request):
     s = request.POST['s']
     q = request.POST['q']
-    p = get_price(s)
-    watch_list = Watchlist.objects.create(username=request.user.username,symbol = s, quantity = q, price = p)
+    p = {}
+    p = Stock_database.objects.filter(symbol=s).all()
+    price = p[0].price
+    watch_list = Watchlist.objects.create(username=request.user.username,symbol = s, quantity = q, price = price)
     return redirect('../../../stock_data/watchlist')
 
 def temp(request):

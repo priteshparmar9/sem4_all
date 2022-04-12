@@ -213,14 +213,19 @@
         <div class="navbar">
             <nav>
                 {% if not user.is_authenticated %}
-                <a href="registration">SignUp</a>
-                <a href="login">SignIn</a>
+                <a href="../../registration">SignUp</a>
+                <a href="../../login">SignIn</a>
                 {% endif %}
                 {% if user.is_authenticated %}
+                <a href="../view_stock">Show Stocks</a>
                 <a href="../watchlist">Watchlist</a>
-                <a href="edit">Edit</a>
-                <a href="../../">Index</a>
-                <a href="logout">Logout</a>
+                <a href="../../edit">Edit</a>
+                <a href="../show_news">News</a>
+                {% if user.username == "Admin" %}
+                <a href="../admin1">Admin</a>
+                {% endif %}
+                <a href="../refresh">Refresh</a>
+                <a href="../../logout">Logout</a>
                 {% endif %}
             </nav>
         </div>
@@ -230,6 +235,7 @@
             <h3>Let's get started to get free stock market statics, events and latest News</h3>
         </div>
         <br>
+        <img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?cs=srgb&dl=pexels-energepiccom-159888.jpg&fm=jpg" alt="" height="490px" width="75%" style="margin-left: 40px">
     </header>
 
     <section class="sec2">
